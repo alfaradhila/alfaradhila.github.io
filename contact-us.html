@@ -11,6 +11,27 @@
             margin: 0;
             padding: 0;
         }
+        header {
+            background-color: #d32f2f; /* Merah */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #1976d2; /* Biru */
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #1565c0; /* Biru lebih gelap */
+            color: white;
+        }
         .container {
             width: 50%;
             margin: 50px auto;
@@ -47,9 +68,25 @@
         button:hover {
             background-color: darkred;
         }
+        footer {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Perpustakaan Alfaradhila</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+    </nav>
     <div class="container">
         <h2>Contact Us</h2>
         <form>
@@ -65,5 +102,8 @@
             <button type="submit">Kirim</button>
         </form>
     </div>
+    <footer>
+        <p>&copy; 2025 Perpustakaan Alfaradhila</p>
+    </footer>
 </body>
 </html>
