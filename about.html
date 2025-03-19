@@ -3,51 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Diri</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Biodata Diri</title>
     <style>
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 18px;
-            text-align: left;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-        th {
+        /* Style dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #d32f2f; /* Merah */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #1976d2; /* Biru */
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #1565c0; /* Biru lebih gelap */
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .main-content {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #d32f2f; /* Merah */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: red;
+        }
+        label {
+            font-weight: bold;
+            color: blue;
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: black;
+        }
+        .info {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <h2>Data Diri</h2>
-    <table>
-        <tr>
-            <th>Field</th>
-            <th>Informasi</th>
-        </tr>
-        <tr>
-            <td>Nama</td>
-            <td>Siti alfaradhila</td>
-        </tr>
-        <tr>
-            <td>NIM</td>
-            <td>220709015</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>@faradhilahsb</td>
-        </tr>
-        <tr>
-            <td>Fakultas</td>
-            <td>Ilmu budaya</td>
-        </tr>
-        <tr>
-            <td>Program studi</td>
-            <td>Perpustakaan dan sains informasi</td>
-        </tr>
-    </table>
+   <header>
+        <h1>Perpustakaan Alfaradhila</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <h2>Biodata Diri</h2>
+        <table>
+            <tr>
+                <th>Nama</th>
+                <td>Siti Alfaradhila</td>
+            </tr>
+            <tr>
+                <th>NIM</th>
+                <td>220709029</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>alfaradhilahsb@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Fakultas</th>
+                <td>Ilmu Budaya</td>
+            </tr>
+            <tr>
+                <th>Program Studi</th>
+                <td>Perpustakaan dan Sains Informasi</td>
+            </tr>
+        </table>
+    </div>   <footer>
+        <p>&copy; 2025 Perpustakaan Alfaradhila</p>
+    </footer>
 </body>
 </html>
