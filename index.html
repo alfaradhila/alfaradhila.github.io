@@ -6,25 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homepage</title>
     <style>
-        /* Style dasar */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            transition: background-color 0.5s, color 0.5s;
         }
 
         header {
-            background-color: #d32f2f; /* Merah */
+            background-color: #d32f2f;
             color: white;
             text-align: center;
             padding: 20px 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
 
         nav {
-            background-color: #1976d2; /* Biru */
+            background-color: #1976d2;
             display: flex;
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
         }
 
         nav a {
@@ -32,11 +36,11 @@
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
+            transition: background 0.3s;
         }
 
         nav a:hover {
-            background-color: #1565c0; /* Biru lebih gelap */
-            color: white;
+            background-color: #1565c0;
         }
 
         .container {
@@ -47,10 +51,13 @@
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 1s forwards 0.5s;
         }
 
         footer {
-            background-color: #d32f2f; /* Merah */
+            background-color: #d32f2f;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -58,23 +65,55 @@
             width: 100%;
             bottom: 0;
         }
+
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px 15px;
+            background: #ff9800;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: #e68900;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <button class="theme-toggle" onclick="toggleTheme()">Mode Gelap</button>
+
     <header>
         <h1>Perpustakaan Alfaradhila</h1>
     </header>
 
-    <!-- Navigasi -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="contact-us.html">Contact Us</a>
     </nav>
 
-    <!-- Konten Utama -->
     <div class="container">
         <div class="main-content">
             <h2>Artikel Terbaru</h2>
@@ -82,10 +121,15 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Perpustakaan Alfaradhila</p>
     </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 
 </body>
 </html>
