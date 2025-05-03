@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dini Library - Seputar Saya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: scrollAnim 1s ease-out forwards;
+      }
+
+      @keyframes scrollAnim {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-tr from-gray-900 via-indigo-800 to-gray-900 text-gray-200 font-sans min-h-screen"
+  >
+    <!-- Hero Section -->
+    <section
+      class="relative w-full bg-cover bg-center bg-no-repeat py-24 px-6 fade-in"
+      style="
+        background-image: url('https://statik.tempo.co/data/2023/07/07/id_1217662/1217662_720.jpg');
+      "
+    >
+      <!-- Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-0"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold drop-shadow-lg">
+          Tentang Saya
+        </h1>
+        <p class="text-lg leading-relaxed mt-4 text-white">
+          <strong>Siti Alfaradhila</strong> adalah mahasiswa Fakultas Ilmu
+          Budaya, Program Studi Perpustakaan dan Sains Informasi. Ia memiliki
+          ketertarikan besar terhadap dunia literasi dan pengembangan teknologi
+          informasi, khususnya perpustakaan digital. Visi saya adalah
+          menciptakan akses informasi yang efektif dan inklusif, kapan saja dan
+          di mana saja, melalui inovasi teknologi.
+        </p>
+      </div>
+    </section>
+
+    <!-- Informasi Pribadi -->
+    <div
+      class="max-w-3xl mx-auto mt-12 bg-gradient-to-r from-indigo-700 to-indigo-800 border border-indigo-600 shadow-lg rounded-2xl p-8 scroll-animate"
+    >
+      <h3
+        class="text-2xl font-semibold text-indigo-100 mb-6 text-center uppercase tracking-wider"
+      >
+        Informasi Pribadi
+      </h3>
+      <table class="w-full table-auto text-gray-200">
+        <tbody>
+          <tr class="border-b border-indigo-500">
+            <td class="py-3 font-medium w-1/3 text-indigo-300">Nama</td>
+            <td class="py-3">Siti Alfaradhila</td>
+          </tr>
+          <tr class="border-b border-indigo-500">
+            <td class="py-3 font-medium text-indigo-300">NIM</td>
+            <td class="py-3">220709029</td>
+          </tr>
+          <tr class="border-b border-indigo-500">
+            <td class="py-3 font-medium text-indigo-300">Email</td>
+            <td class="py-3">alfaradhilahsb@gmail.com</td>
+          </tr>
+          <tr class="border-b border-indigo-500">
+            <td class="py-3 font-medium text-indigo-300">Fakultas</td>
+            <td class="py-3">Ilmu Budaya</td>
+          </tr>
+          <tr>
+            <td class="py-3 font-medium text-indigo-300">Program Studi</td>
+            <td class="py-3">Perpustakaan dan Sains Informasi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tombol Kembali -->
+    <div class="text-center mt-12">
+      <a
+        href="Homework.html"
+        class="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 shadow-lg text-base font-semibold"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        Kembali ke Homework
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-gray-300 py-5 mt-20">
+      <div
+        class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-sm"
+      >
+        <p class="text-center md:text-left mb-2 md:mb-0">
+          &copy; 2025 Perpustakaan Alfaradhila. Dibuat dengan 💜 untuk pecinta
+          buku.
+        </p>
+        <div class="flex gap-4">
+          <a href="index.html" class="hover:text-indigo-400">Home</a>
+          <a href="about.html" class="hover:text-indigo-400">About</a>
+          <a href="feedback.html" class="hover:text-indigo-400">Feedback</a>
+          <a href="contact-us.html" class="hover:text-indigo-400">Contact</a>
+          <a href="Homework.html" class="hover:text-indigo-400">Homework</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

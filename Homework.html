@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage | Perpustakaan Alfaradhila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-out both;
+      }
+
+      .fade-in-delayed {
+        animation: fadeIn 1.5s ease-out both;
+      }
+
+      .slide-up {
+        animation: slideUp 0.8s ease-out both;
+      }
+
+      .slide-up-delay-1 {
+        animation-delay: 0.3s;
+      }
+
+      .slide-up-delay-2 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <div class="min-h-screen flex flex-col">
+      <!-- Navbar -->
+      <header
+        class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm border-b dark:border-gray-700"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        >
+          <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400"
+            >📚 Alfaradhila Library</span
+          >
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <nav
+            id="nav-links"
+            class="hidden md:flex gap-6 font-medium text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >About</a
+            >
+            <a
+              href="Feed-back.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >FeedBack</a
+            >
+            <a
+              href="contact-us.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Contact</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Homework</a
+            >
+          </nav>
+        </div>
+        <div
+          id="mobile-nav"
+          class="md:hidden hidden px-6 pb-4 space-y-2 font-medium text-base"
+        >
+          <a
+            href="index.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >About</a
+          >
+          <a
+            href="Feed-back.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >FeedBack</a
+          >
+          <a
+            href="contact-us.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Contact</a
+          >
+          <a
+            href="Homework.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Homework</a
+          >
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section
+        class="relative w-full bg-cover bg-center bg-no-repeat py-24 px-6 fade-in"
+        style="
+          background-image: url('https://images.theconversation.com/files/357681/original/file-20200911-18-gfr1ae.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip');
+        "
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-indigo-500/40 to-indigo-500/70 dark:from-gray-900/50 dark:to-gray-900/80 z-0"
+        ></div>
+        <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl font-bold drop-shadow-lg text-indigo-800 dark:text-white"
+          >
+            Tugas-Tugas Saya
+          </h1>
+          <p
+            class="mt-6 text-lg sm:text-xl drop-shadow-md text-gray-600 dark:text-gray-300"
+          >
+            Berikut adalah daftar tugas-tugas yang telah saya selesaikan
+          </p>
+        </div>
+      </section>
+
+      <!-- Tugas Section -->
+      <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Card 1 - Biodata -->
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group slide-up slide-up-delay-1"
+          >
+            <div class="flex justify-center mb-4">
+              <svg
+                class="w-12 h-12 text-indigo-600 group-hover:scale-110 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 0115 0v.75H4.5v-.75z"
+                />
+              </svg>
+            </div>
+            <h2
+              class="text-2xl font-extrabold text-center text-indigo-700 mb-3"
+            >
+              Tabel Biodata
+            </h2>
+            <p class="text-gray-600 text-center text-sm leading-relaxed mb-6">
+              Lihat data lengkap mahasiswa seperti nama, NIM, program studi,
+              fakultas, semester, dan tahun ajaran dalam tampilan tabel.
+            </p>
+            <a
+              href="tabel-biodata.html"
+              class="block w-full text-center bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold py-3 rounded-xl hover:from-indigo-600 hover:to-blue-700 transition duration-300 shadow-md hover:shadow-xl"
+            >
+              Lihat Tabel Biodata
+            </a>
+          </div>
+
+          <!-- Card 2 - Tabel Perkalian -->
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group slide-up slide-up-delay-2"
+          >
+            <div class="flex justify-center mb-4">
+              <svg
+                class="w-12 h-12 text-indigo-600 group-hover:scale-110 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+            </div>
+            <h2
+              class="text-2xl font-extrabold text-center text-indigo-700 mb-3"
+            >
+              Tabel Perkalian
+            </h2>
+            <p class="text-gray-600 text-center text-sm leading-relaxed mb-6">
+              Temukan tabel interaktif untuk menghitung dan mempelajari hasil
+              perkalian angka 1 sampai 10.
+            </p>
+            <a
+              href="tabel-perkalian.html"
+              class="block w-full text-center bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold py-3 rounded-xl hover:from-indigo-600 hover:to-blue-700 transition duration-300 shadow-md hover:shadow-xl"
+            >
+              Lihat Tabel Perkalian
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        class="bg-indigo-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-4 mt-auto fade-in-delayed"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-xs text-center md:text-left">
+            &copy; 2025 Perpustakaan Alfaradhila. Dibuat dengan ❤️ untuk pecinta
+            buku.
+          </p>
+          <div class="flex gap-3 mt-2 md:mt-0 text-xs">
+            <a
+              href="index.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >About</a
+            >
+            <a
+              href="Feed-back.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Feedback</a
+            >
+            <a
+              href="contact-us.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Contact</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Homework</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Theme Toggle & Mobile Menu -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      menuBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
